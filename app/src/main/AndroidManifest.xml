@@ -13,11 +13,11 @@
         android:theme="@style/Theme.TiendaAR_PDM"
         tools:targetApi="31">
         <activity
-            android:name=".RegistrarActivity"
+            android:name=".MenuPrincipal"
             android:exported="false" />
         <activity
-            android:name=".IniciarSecionActivity"
-            android:exported="true" >
+            android:name=".MainActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -25,8 +25,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
-            android:exported="true"/>
+            android:name=".IniciarSecionActivity"
+            android:exported="true" />
+        <activity
+            android:name=".RegistrarActivity"
+            android:exported="false" />
     </application>
 
 </manifest>
