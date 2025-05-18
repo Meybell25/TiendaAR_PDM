@@ -7,20 +7,21 @@
     android:layout_height="match_parent"
     android:background="@drawable/degradado_rosa"
     tools:context=".RegistrarActivity">
+
     <TextView
         android:id="@+id/lblSignUpTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="140dp"
         android:fontFamily="sans-serif-medium"
         android:text="REGISTRARSE"
         android:textColor="@color/white"
         android:textSize="28sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.537" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/lblSignUpSubtitle"
@@ -41,7 +42,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="230dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="#80FFFFFF"
         app:boxBackgroundColor="#33FFFFFF"
@@ -141,19 +142,20 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="32dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:backgroundTint="@color/white"
         android:padding="15dp"
         android:text="Registrarse"
+        android:textAllCaps="false"
         android:textColor="@color/rosa_acento"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textAllCaps="false"
         app:cornerRadius="24dp"
-        app:layout_constraintTop_toBottomOf="@+id/tilContrasena"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/tilContrasena" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnIniciarSesionConGoogle"
@@ -182,9 +184,9 @@
         android:textColor="#CCFFFFFF"
         android:textSize="14sp"
         app:layout_constraintEnd_toStartOf="@+id/lblIniciarSesion"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintHorizontal_chainStyle="packed"
-        tools:layout_editor_absoluteY="633dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="634dp" />
 
     <TextView
         android:id="@+id/lblIniciarSesion"
@@ -197,4 +199,15 @@
         app:layout_constraintBaseline_toBaselineOf="@+id/lblYaTengoCuenta"
         app:layout_constraintStart_toEndOf="@+id/lblYaTengoCuenta"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="122dp"
+        android:layout_height="106dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/lblSignUpTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/logoicontransparent" />
 </androidx.constraintlayout.widget.ConstraintLayout>
