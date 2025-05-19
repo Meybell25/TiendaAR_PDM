@@ -16,8 +16,6 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tiendaar_pdm.DataBase.DatabaseMuebleria;
 import com.example.tiendaar_pdm.Models.Usuario;
-import com.example.tiendaar_pdm.VistasAdmin.MenuAdmin;
-import com.example.tiendaar_pdm.VistasClientes.MenuPrincipal;
 import com.example.tiendaar_pdm.Utils.AdminUtils;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
@@ -123,7 +121,6 @@ public class RegistrarActivity extends AppCompatActivity {
 
         // Mostrar progreso y realizar acción inmediata (esto es lo que funciona)
         btnRegistrarse.setEnabled(false);
-        Toast.makeText(RegistrarActivity.this, "Procesando registro...", Toast.LENGTH_SHORT).show();
 
         // Definir el rol del usuario (cliente por defecto)
         String rol = AdminUtils.isAdminEmail(email) ? "admin" : "cliente";
@@ -161,18 +158,11 @@ public class RegistrarActivity extends AppCompatActivity {
                                 ", Nombre: " + usuario.getNombre() +
                                 ", Email: " + usuario.getEmail() +
                                 ", Rol: " + usuario.getRol());
-
-                        // Para debug, también podemos mostrar un Toast
-                        // Toast.makeText(RegistrarActivity.this,
-                        //       "Usuario guardado en Room con ID: " + usuario.getId_usuario(),
-                        //       Toast.LENGTH_SHORT).show();
+                        
                     });
                 } else {
                     runOnUiThread(() -> {
                         Log.e(TAG, "VERIFICACIÓN: No se encontró el usuario en Room Database");
-                        // Toast.makeText(RegistrarActivity.this,
-                        //       "Error: No se pudo guardar el usuario en Room Database",
-                        //       Toast.LENGTH_SHORT).show();
                     });
                 }
             } catch (Exception e) {
