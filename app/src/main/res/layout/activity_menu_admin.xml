@@ -5,14 +5,14 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo3"
-    tools:context=".VistasClientes.MenuPrincipal">
+    android:background="@drawable/fondo2"
+    tools:context=".VistasAdmin.MenuAdmin">
 
     <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="311dp"
-        android:layout_height="307dp"
-        app:srcCompat="@drawable/logo2square"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="169dp" />
+        android:id="@+id/imageView5"
+        android:layout_width="221dp"
+        android:layout_height="384dp"
+        app:srcCompat="@drawable/logos2square"
+        tools:layout_editor_absoluteX="86dp"
+        tools:layout_editor_absoluteY="131dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
