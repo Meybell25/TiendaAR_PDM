@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -15,8 +16,8 @@ import androidx.core.view.WindowInsetsCompat;
 
 import com.example.tiendaar_pdm.DataBase.DatabaseMuebleria;
 import com.example.tiendaar_pdm.Models.Usuario;
-import com.example.tiendaar_pdm.VistasAdmin.MenuAdmin;
-import com.example.tiendaar_pdm.VistasClientes.MenuPrincipal;
+import com.example.tiendaar_pdm.VistasAdmin.MenuAdminActivity;
+import com.example.tiendaar_pdm.VistasClientes.MenuClienteActivity;
 import com.google.android.material.button.MaterialButton;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.FirebaseAuth;
@@ -350,11 +351,13 @@ public class IniciarSecionActivity extends AppCompatActivity {
 
         // Determinar qué actividad abrir según el rol del usuario
         if ("admin".equalsIgnoreCase(rol)) {
-            intent = new Intent(IniciarSecionActivity.this, MenuAdmin.class);
-            Log.d(TAG, "Navegando al menú de administrador");
-        } else {
-            intent = new Intent(IniciarSecionActivity.this, MenuPrincipal.class);
+            intent = new Intent(IniciarSecionActivity.this, MenuClienteActivity.class);
             Log.d(TAG, "Navegando al menú de cliente");
+
+        } else {
+            intent = new Intent(IniciarSecionActivity.this, MenuAdminActivity.class);
+            Log.d(TAG, "Navegando al menú de administrador");
+
         }
 
         // Agregar información extra al intent si es necesario

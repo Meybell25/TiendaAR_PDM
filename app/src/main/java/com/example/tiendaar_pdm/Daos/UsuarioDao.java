@@ -50,4 +50,9 @@ public interface UsuarioDao {
     @Transaction
     @Query("SELECT * FROM usuarios")
     List<UsuarioConOrdenes> getTodosUsuariosConOrdenes();
+
+    @Query("SELECT * FROM usuarios WHERE email = :correo AND contraseña = :contrasenia LIMIT 1")
+    Usuario getUsuarioPorCorreoYContrasenia(String correo, String contrasenia);
+
+
 }

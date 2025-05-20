@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    android:background="@drawable/degradado_rosa"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Título -->
+    <TextView
+        android:id="@+id/lblAgregarCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Agregar Categoría"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Nombre de Categoría -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/tilNombreCategoria"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:backgroundTint="#80FFFFFF"
+        app:boxBackgroundColor="#33FFFFFF"
+        app:boxCornerRadiusTopStart="24dp"
+        app:boxCornerRadiusTopEnd="24dp"
+        app:boxCornerRadiusBottomStart="24dp"
+        app:boxCornerRadiusBottomEnd="24dp"
+        app:boxStrokeColor="@android:color/white"
+        app:hintEnabled="false"
+        app:startIconTint="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@id/lblAgregarCategoria"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtNombreCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nombre de la categoría"
+            android:inputType="text"
+            android:paddingVertical="16dp"
+            android:textColor="@android:color/white"
+            android:textColorHint="#80FFFFFF" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!-- Botón -->
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSubirImagenCategoria"
+        android:layout_width="wrap_content"
+        android:layout_height="51dp"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="@color/rosa_claro"
+        android:drawableStart="@drawable/ic_mas"
+        android:padding="12dp"
+        android:text="Subir Imagen"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:iconPadding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tilNombreCategoria" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnInsertarCategoria"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="32dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="@android:color/white"
+        android:text="Insertar categoría"
+        android:textAllCaps="false"
+        android:textColor="@color/rosa_acento"
+        android:textStyle="bold"
+        app:cornerRadius="24dp"
+        app:icon="@drawable/ic_mas"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        app:iconTint="@color/rosa_acento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.75"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgVistaPreviaCategoria" />
+
+    <TextView
+        android:id="@+id/btnSalir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="9dp"
+        android:text="Salir"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnInsertarCategoria" />
+
+    <ImageView
+        android:id="@+id/imgVistaPreviaCategoria"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.482"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSubirImagenCategoria"
+        tools:srcCompat="@tools:sample/avatars" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

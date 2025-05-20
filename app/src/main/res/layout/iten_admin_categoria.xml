@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="16dp"
+    app:cardElevation="4dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp">
+
+        <!-- Imagen de la categoría o producto -->
+        <ImageView
+            android:id="@+id/imgImagenCategoria"
+            android:layout_width="0dp"
+            android:layout_height="180dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/categoria"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- Contenedor de texto -->
+        <LinearLayout
+            android:id="@+id/llInfoProducto"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp"
+            app:layout_constraintTop_toBottomOf="@id/imgImagenCategoria"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <!-- Nombre -->
+            <TextView
+                android:id="@+id/lblNombreCatgoria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre de la categoría"
+                android:textColor="@color/morado_oscuro"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:maxLines="2"
+                android:ellipsize="end" />
+
+
+            <!-- Botones para el administrador -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:gravity="end">
+
+                <!-- Botón Realidad Aumentada -->
+                <ImageButton
+                    android:id="@+id/btnEditarCategoria"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:background="@drawable/style_circulo2"
+                    android:src="@drawable/ic_editar"
+                    android:tint="@color/white"
+                    android:contentDescription="Ver en Realidad Aumentada" />
+
+                <!-- Botón Editar -->
+                <ImageButton
+                    android:id="@+id/btnEliminarCategoria"
+                    android:layout_width="42dp"
+                    android:layout_height="42dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/style_circulo2"
+                    android:src="@drawable/ic_eliminar"
+                    android:tint="@color/white"
+                    android:contentDescription="Editar Categoría" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>

@@ -4,15 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
+    android:background="@color/rosa_acento"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo3"
-    tools:context=".VistasClientes.MenuPrincipal">
+    tools:context=".VistasClientes.MenuClienteActivity">
 
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="311dp"
-        android:layout_height="307dp"
-        app:srcCompat="@drawable/logo2square"
-        tools:layout_editor_absoluteX="63dp"
-        tools:layout_editor_absoluteY="169dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

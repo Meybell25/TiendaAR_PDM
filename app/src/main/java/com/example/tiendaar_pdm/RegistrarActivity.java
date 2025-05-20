@@ -1,10 +1,15 @@
 package com.example.tiendaar_pdm;
 
+import static androidx.core.content.ContentProviderCompat.requireContext;
+import static java.security.AccessController.getContext;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
 import android.util.Patterns;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +35,7 @@ import java.util.concurrent.Executors;
 
 public class RegistrarActivity extends AppCompatActivity {
     private static final String TAG = "RegistrarActivity";
+    private Spinner spRol;
 
     private TextInputEditText txtNombreUsuario, txtEmail, txtContrasena;
     private MaterialButton btnRegistrarse;
@@ -62,6 +68,12 @@ public class RegistrarActivity extends AppCompatActivity {
         txtContrasena = findViewById(R.id.txtContrasena);
         btnRegistrarse = findViewById(R.id.btnRegistrarse);
         lblIniciarSesion = findViewById(R.id.lblIniciarSesion);
+        spRol = findViewById(R.id.spRol);
+
+        String[] roles = {"admin", "cliente"};
+        ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, roles);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spRol.setAdapter(adapter);
 
         // Botón de registro
         btnRegistrarse.setOnClickListener(v -> registrarUsuario());

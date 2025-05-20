@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="4dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:padding="16dp">
+
+        <!-- ID del producto -->
+        <TextView
+            android:id="@+id/lblProducto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nombre de Producto"
+            android:textColor="@color/black"
+            android:textSize="24dp"
+            android:textStyle="bold" />
+
+        <!-- Cantidad -->
+        <TextView
+            android:id="@+id/lblCategoria"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Cantidad: 2"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:layout_marginTop="4dp" />
+
+        <!-- Precio unitario -->
+        <TextView
+            android:id="@+id/lblPrecioUnitario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Precio unitario: $25.00"
+            android:textColor="@color/rosa_acento"
+            android:textSize="15sp" />
+
+        <!-- Total por ese producto -->
+        <TextView
+            android:id="@+id/lblestado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Subtotal: $50.00"
+            android:textStyle="bold"
+            android:textColor="@color/morado_oscuro"
+            android:textSize="16sp"
+            android:layout_marginTop="6dp" />
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
